@@ -9,7 +9,7 @@ attr_accessor :name, :songs
   def initialize(name)
     @name = name
     @songs = []
-    @@all << self unless @@all.include?(self.name)
+    @@all << self.name 
   end
 
   def add_song(song)

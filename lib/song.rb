@@ -37,7 +37,7 @@ class Song
 
 
 
-    if self.artist != nil
+    if self.artist != nil #self.artist will always be nil here. 
       #self.artist.name = name
       self.artist.add_song(self.name)
       self.artist.name = name

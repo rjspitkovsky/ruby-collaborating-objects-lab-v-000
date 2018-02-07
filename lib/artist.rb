@@ -41,15 +41,6 @@ attr_accessor :name, :songs
     else
       self.new(name)
     end
-
-
-
-    # if self.find_by_name(name) == nil
-    #   self.new(name)
-    # else
-    #   self.find_by_name(name)
-    # end
-
   end
 
   def print_songs
@@ -57,5 +48,5 @@ attr_accessor :name, :songs
       puts song.name
     end
   end
-binding.pry
+
 end

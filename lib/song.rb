@@ -32,20 +32,20 @@ class Song
   end
 
   def artist_name=(artist_name)#takes in the string, runs the find_or_create code then assigns an Artist object
-    if Artist.find_by_name(artist_name) == nil || false 
+    if Artist.find_by_name(artist_name) == nil || false
       self.artist = Artist.new(artist_name)
-    else 
-      self.artist.name = name 
+    else
+      self.artist.name = name
       self.artist.add_song(self.name)
     end 
-      
+
 
 
 
     # if self.artist != nil
     #   #self.artist.name = name
     #   self.artist.add_song(self.name)
-    #   self.artist.name = name 
+    #   self.artist.name = name
     # else
     #   self.artist = Artist.new(artist_name)
     # end

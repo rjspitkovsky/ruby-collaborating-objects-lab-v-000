@@ -10,7 +10,7 @@ class MP3Importer
     end
 
     def files
-      Dir.entries("./spec/fixtures/mp3s").each do |filename|
+      Dir.entries(path).each do |filename|
         @@filenames << filename
       end
       @@filenames.reject! do |filename|

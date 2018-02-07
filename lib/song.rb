@@ -18,6 +18,7 @@ class Song
     artist_name = filename.split(" - ")[0]#The artist_name is correct
     song_name = filename.split(" - ")[1]#The song_name is correct
     title = self.new(song_name)#Instantiates a new song instance with the song_name being the song name
+    title.artist = artist_name 
     title.artist_name=(artist_name) #Associates song with artist using helper method, .artist_name=
     #Artist.find_or_create_by_name(artist_name)
     #title.artist.add_song(song_name)
@@ -32,7 +33,7 @@ class Song
   end
 
   def artist_name=(artist_name)#takes in the string, runs the find_or_create code then assigns an Artist object
-
+    
 
 
 

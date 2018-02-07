@@ -46,23 +46,23 @@ class Song
 
 
 
-    if self.artist != nil #self.artist will always be nil here.
-      #self.artist.name = name
-      self.artist.add_song(self.name)
-      self.artist.name = name
-    else
-      self.artist = Artist.new(artist_name)
-    end
-
-
-
-
-    # if (self.artist.nil?)
-    #   self.artist = Artist.new(artist_name)
-    # else
+    # if self.artist != nil #self.artist will always be nil here.
+    #   #self.artist.name = name
+    #   self.artist.add_song(self.name)
     #   self.artist.name = name
+    # else
+    #   self.artist = Artist.new(artist_name)
     # end
-    # self.artist.add_song(self.name)
+
+
+
+
+    if (self.artist.nil?)
+      self.artist = Artist.new(artist_name)
+    else
+      self.artist.name = name
+    end
+    self.artist.add_song(self.name)
 
     #Artist.find_or_create_by_name(artist_name)
     #

@@ -4,7 +4,7 @@ require 'pry'
 class Song
   attr_accessor :name, :artist, :filename
 
-  
+
   def initialize(name)
     @name = name
     @artist = artist
@@ -20,7 +20,6 @@ class Song
     song_name = filename.split(" - ")[1]#The song_name is correct
     title = self.new(song_name)#Instantiates a new song instance with the song_name being the song name
     title.artist = artist_name
-    @@artists << title.artist
     title.artist_name=(artist_name) #Associates song with artist using helper method, .artist_name=
     #Artist.find_or_create_by_name(artist_name)
     #title.artist.add_song(song_name)
